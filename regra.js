@@ -2,13 +2,13 @@ function calculo(val1, val2) {
   valor_compra = parseInt(val1);
   valor_entrada = val2;
 
-  var taxas = [4.32, 5.12, 5.83, 6.59, 7.35, 8.36, 9.13, 9.91, 10.70, 11.48, 12.28, 14.91, 14.91, 15.73, 16.55, 17.38, 18.21, 22.04];
+  var taxas = [0.1, 4.32, 5.12, 5.83, 6.59, 7.35, 8.36, 9.13, 9.91, 10.70, 11.48, 12.28, 14.91, 14.91, 15.73, 16.55, 17.38, 18.21, 22.04];
 
-  let taxa_debito = 1.8;
+  let taxa_debito = 0.1;
   var valor_parcelas = [];
   var valor_total = [];
 
-  var valor = (valor_compra + 50) - valor_entrada;
+  var valor = valor_compra - valor_entrada;
 
   //parte da taxa de débito
   let percentual_debito = (taxa_debito * valor) / 100;
