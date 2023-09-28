@@ -2,7 +2,7 @@ function calculo(val1, val2) {
   valor_compra = parseInt(val1);
   valor_entrada = val2;
 
-  var taxas = [4.32, 5.12, 5.83, 6.59, 7.35, 8.36, 9.13, 9.91, 10.70, 11.48, 12.28, 14.91, 14.91, 15.73, 16.55, 17.38, 18.21, 22.04];
+  var taxas = [4.32, 5.12, 5.83, 6.59, 7.35, 8.36, 9.13, 9.91, 10.70, 11.48, 12.28, 14.91, 14.91, 15.73, 16.55, 17.38, 18.21];
 
   let taxa_debito = 0.1;
   var valor_parcelas = [];
@@ -26,9 +26,6 @@ function calculo(val1, val2) {
   var table = "";
   for(var i in valor_parcelas){
     let parcelas = (parseInt(i) + 2);
-    if (parcelas == 19) {
-      parcelas = 21;
-    }
     table += "<tr>" + "<td>" + parcelas + " x" + "</td>" + "<td>" + valor_parcelas[i].toLocaleString('pt-br', {style: 'currency', currency: 'BRL'}) + "</td>" + "<td>" + 
     valor_total[i].toLocaleString('pt-br', {style: 'currency', currency: 'BRL'}) + "</td></tr>";
   }
